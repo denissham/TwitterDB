@@ -1,0 +1,1 @@
+SELECT * FROM twitterDB.tweets ORDER BY create_time DESC LIMIT 5;
