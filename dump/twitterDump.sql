@@ -25,6 +25,7 @@ DROP TABLE IF EXISTS `comments`;
 CREATE TABLE `comments` (
   `comment_id` int NOT NULL,
   `body` varchar(45) NOT NULL,
+  `create_time` timestamp NOT NULL,
   `tweet_id` int DEFAULT NULL,
   `user_id` int DEFAULT NULL,
   PRIMARY KEY (`comment_id`),
@@ -41,7 +42,7 @@ CREATE TABLE `comments` (
 
 LOCK TABLES `comments` WRITE;
 /*!40000 ALTER TABLE `comments` DISABLE KEYS */;
-INSERT INTO `comments` VALUES (1,'Some comment w/o message',3,2),(2,'It isRealy hot this winter, so spring is now',3,1),(3,'This is realy bad',4,1),(4,'comment fo tweet with bitcoin text',1,6),(5,'Gretta should cry',3,2),(6,'Turtles ninja are realy cool',7,5);
+INSERT INTO `comments` VALUES (1,'Some comment w/o message','2020-02-29 05:22:16',3,2),(2,'It isRealy hot this winter, so spring is now','2020-03-08 03:16:22',3,1),(3,'This is realy bad','2020-03-14 03:16:22',4,1),(4,'comment fo tweet with bitcoin text','2020-03-01 03:16:22',1,6),(5,'Gretta should cry','2020-02-29 08:16:22',3,2),(6,'Turtles ninja are realy cool','2020-03-15 17:16:22',7,5);
 /*!40000 ALTER TABLE `comments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -136,4 +137,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-03-09 21:48:20
+-- Dump completed on 2020-03-15 20:59:25
